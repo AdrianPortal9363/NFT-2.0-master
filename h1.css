@@ -1,0 +1,92 @@
+h1
+{
+    color: whitesmoke;
+    font-size: 50;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+div
+{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.login_page 
+{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 32px 32px;
+    text-align: center;
+    margin-top: 150px;
+    width: 400px;
+    border-radius: 15px;
+}
+.side_info 
+{
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 32px 32px;
+    text-align: center;
+    margin-top: 150px;
+    background-color: #0E2A47;
+    border-radius: 15px;
+}
+label 
+{
+    width: 120%;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+input
+{
+    text-align: left;
+    display:list-item;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+input[type="submit"] 
+{
+    background-color: #0E2A47;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;  
+    margin-top: 80px;
+}
+input[type="submit"]:hover 
+{
+    background-color: #4d86bb;
+}
+h3
+{
+    text-align: left;
+    font-size: 15px;
+    color: azure;
+}
+.back
+{
+    position: relative;
+    top: 160px;
+    left: 850px;
+    color: inherit;
+    size: 50px;
+}
+label#usererror_
+{
+    font-size: 13px;
+    position: relative;
+    bottom: 30px;
+    color: red;
+}
+label#passerror_
+{
+    position: relative;
+    bottom: 30px;
+    font-size: 13px;
+    color: red;
+}
+
+
