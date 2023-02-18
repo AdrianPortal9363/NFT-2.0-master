@@ -271,3 +271,21 @@ nav li
   background-color: white;
   color: #0E2A47;
 }
+
+.image_change_btn
+{
+  height: 606px;
+  position: relative;
+  bottom: 299px;
+  right: 28px;
+  opacity: 0.4;
+}
+
+.image_change_btn1
+{
+  height: 606px;
+  position: relative;
+  bottom: 299px;
+  right: 615px;
+  opacity: 0.4;
+}

@@ -6,7 +6,7 @@ $(document).ready(function()
         $('.error').hide();
         var login = true;
         var username = $("input#Username_").val();
-        if (username == "" || !/^(?=.*[0-9])(?=.*[a-zA-Z])/.test(username))
+        if (username == "" || !username.charAt(0) == /^(?=.*[0-9])(?=.*[a-zA-Z])/)
         {
             $("label#usererror_").show();
             $("input#Username_").focus();

@@ -1,0 +1,9 @@
+$(document).ready(function()
+{
+    $(".expanded_text").hide();
+    $(".read_more").click(function()
+    {
+        $(".read_more").hide();
+        $(".expanded_text").show();
+    });
+});
