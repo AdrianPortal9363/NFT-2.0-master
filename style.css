@@ -10,7 +10,6 @@ body
   margin: 0;
 }
 
-/* Style the top navigation bar */
 .navbar 
 {
   display: flex;
@@ -21,7 +20,6 @@ body
   padding: 18px;
 }
 
-/* Style the navigation bar links */
 .navbar a 
 {
   color: white;
@@ -51,7 +49,6 @@ nav li
   color: #0E2A47;
 }
 
-/* Right-aligned link */
 .navbar a.right 
 {
   float: right;
@@ -66,7 +63,6 @@ nav li
   padding: 20px;
   }
   
-  /* Trending list */
   .trending-container 
   {
   width: 95%;
@@ -98,7 +94,6 @@ nav li
   margin-top: 50px;
   }
   
-  /* Notable Collection list */
   #notable-container 
   {
   width: 95%;
@@ -289,3 +284,4 @@ nav li
   right: 615px;
   opacity: 0.4;
 }
+

@@ -1,0 +1,73 @@
+body {
+  background-color: #f2f2f2	!important;
+}
+
+/* Style the fieldset */
+fieldset {
+    border: none;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+/* Style the input fields */
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the labels */
+label {
+    font-weight: bold;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the required field indicator */
+span.required {
+    color: red;
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Style the checkbox */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon-box i {
+    font-size: 24px;
+    color: #333;
+    margin-right: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.icon-box i:hover {
+    color: #4CAF50;
+}
+
+
+
+
