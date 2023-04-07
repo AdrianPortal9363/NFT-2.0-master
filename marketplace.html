@@ -9,6 +9,8 @@
   <script src="rotatingimages.js"></script>
   <script src="Onclick.js"></script>
   <script src="expandedText.js"></script>
+  <script src="uploadScreen.js"></script>
+  <script src="debugging.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +34,19 @@
   </header>
         <main>
             <div id="market">
-                <input type="file" name="upload" id="file_upload">
+                <input type="button" name="upload" class="file_upload" value="Upload">
+            </div>
+            <div id="uploadScreen" class="upload">
+              <h2>Upload NFT</h2>
+                <form action="submit.php" method="POST" enctype="multipart/form-data">
+                  <label for="price">Price:</label>
+                  <input type="text" id="price" name="price" class="price">
+                  <label for="name" id="namelabel">Name:</label>
+                  <input type="text" id="name" name="name" class="nftname">
+                  <input type="file" name="file_upload" id="file_upload" class="fileupload">
+                  <input type="submit" value="Upload" class="nftupload">
+                </form>
+              </div>
             </div>
         </main>
         <footer>
