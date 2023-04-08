@@ -35,6 +35,7 @@
         <main>
             <div id="market">
                 <input type="button" name="upload" class="file_upload" value="Upload">
+                <?php include 'view.php'; ?>
             </div>
             <div id="uploadScreen" class="upload">
               <h2>Upload NFT</h2>
