@@ -14,11 +14,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     $image_path = "uploads/" . $row['image'];
     $price = $row['price'];
     $name = $row['name'];
-    while($row=mysqli_fetch_array($result))
-    {
-		echo $image_path.' '.$price.' '.$name.'<br/>';
-	}
-
 }
 echo "</table>";
 
