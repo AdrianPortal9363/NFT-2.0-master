@@ -15,6 +15,7 @@ else
     echo "Connection established. \n";
 
     $id = $_POST['id'];
+    error_log("The ID value is: " . $id);
     $name = $_POST['name'];
     $price = $_POST['price'];
 
@@ -24,14 +25,14 @@ else
         $temp_name = $_FILES['image']['tmp_name'];
         $path = "uploads/" . $image;
         move_uploaded_file($temp_name, $path);
-        $sql = "UPDATE nfts SET name='$name', price='$price', image='$image' WHERE cid='$id'";
+        $query = "UPDATE nfts SET name='$name', price='$price', image='$image' WHERE cid='$id'";
+        $result = mysqli_query($dbc, $query) or die("Error querying database");
     }
     else
     {
         $query = "UPDATE nfts SET name='$name', price='$price' WHERE cid='$id'";
+        $result = mysqli_query($dbc, $query) or die("Error querying database");
     }
-    $result = mysqli_query($dbc, $query) or die("Error querying database");
-
     mysqli_close($dbc);
 }
 ?>

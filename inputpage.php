@@ -6,7 +6,6 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="java.js"></script>
   <script src="jquery-3.6.3.min.js"></script>
-  <script src="stopredirect.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

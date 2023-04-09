@@ -6,7 +6,6 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="java.js"></script>
   <script src="jquery-3.6.3.min.js"></script>
-  <script src="stopredirect.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +32,8 @@
   </header>
   <main class="about-us">
   <h1>Update Transaction</h1> <br>
-    <form action="altertable.php" method="POST" enctype="multipart/form-data">
+  <h2 id="alterh2">
+    <form action="altertable.php" method="POST" id="alterform" enctype="multipart/form-data">
         <label for="id">ID number of the table:</label> <br>
         <input type="text" id="id" name="id">
         <label for="name">Replace name of nft:</label>
@@ -41,9 +41,10 @@
         <label for="price">Replace price of nft:</label>
         <input type="text" id="price" name="price">
         <label for="image">Replace image of nft:</label>
-        <label for="image" id="image" name="image"></label>
-        <input type="submit" name="submit" value="Alter table">
+        <input type="file" name="file_upload" id="file_upload" class="fileupload">
+        <input type="submit" id="alter" name="submit" value="Alter table">
     </form>
+  </h2>
   </main>
   <footer>
     <div id="copyright">

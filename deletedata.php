@@ -1,29 +1,31 @@
 <?php
 $db_host = "localhost";
 $db_username = "nftuser";
-$db_password = "Heavenguard0525.";
+$db_passwd = "Heavenguard0525.";
 $db_name = "nftwebsite";
-$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+$dbc = mysqli_connect($db_host, $db_username, $db_passwd, $db_name) or die ("Could not connect! \n");
 
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-}
-
-if (isset($_POST['submit'])) 
+if ($dbc->connect_error) 
 {
-
-    $id = $_POST['id'];
-    $delete = $connection->prepare("DELETE FROM nfts WHERE cid = $transaction_id");
-
-    if ($delete->affected_rows > 0) 
-    {
-        echo "Transaction deleted successfully!";
-    } 
-    else 
-    {
-        echo "Transaction not found or could not be deleted.";
-    }
+    die('Connection failed: ' . $dbc->connect_error);
 }
-mysqli_close($connection);
+else
+{
+    if (isset($_POST['submit'])) 
+    {
+        $id = $_POST['id'];
+        $delete = "DELETE FROM nfts WHERE cid = $id";
+        $result = mysqli_query($dbc, $delete) or die("Error querying database");
+
+        if ($result && mysqli_affected_rows($dbc) > 0) 
+        {
+            echo "Transaction deleted successfully!";
+        } 
+        else 
+        {
+            echo "Transaction not found or could not be deleted.";
+        }
+    }
+    mysqli_close($dbc);
+}
 ?>
