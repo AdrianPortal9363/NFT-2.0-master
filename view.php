@@ -5,26 +5,26 @@ $db_passwd="Heavenguard0525.";
 $db_name="nftwebsite";
 $dbc=mysqli_connect($db_host,$db_username,$db_passwd,$db_name) or die ("Could not Connect! \n");
 
-$query = "SELECT * FROM nfts";
-$result = mysqli_query($dbc, $query);
+$nftsquery = "SELECT * FROM nfts";
 
-if (!$result) 
+$nfts = mysqli_query($dbc, $nftsquery);
+
+if (!$nfts) 
 {
     die("Error querying database: " . mysqli_error($dbc));
 }
 
 echo "<table>";
 echo "<tr><th>Image</th><th>Price</th><th>Name</th></tr>";
-while ($row = mysqli_fetch_assoc($result)) 
+while ($row = mysqli_fetch_assoc($nfts)) 
 {
-    error_reporting(E_ALL);
-    ini_set('display_errors', '1');
     $image_path = "uploads/" . $row['image'];
     $price = $row['price'];
     $name = $row['name'];
-    echo "<tr><td><img src='$image_path></td><td>$price</td><td>$name</td></tr>";
+    echo "<tr><td><img src='$image_path' alt='nft image'></td><td>$price</td><td>$name</td></tr>";
 }
 echo "</table>";
+
 
 mysqli_close($dbc);
 ?>
