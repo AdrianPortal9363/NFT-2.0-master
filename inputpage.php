@@ -5,6 +5,7 @@
   <link rel="icon" type="image/png" href="Images/favicon.png">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="java.js"></script>
+  <script src="jquery-3.6.3.min.js"></script>
   <script src="stopredirect.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <meta charset="UTF-8">
@@ -20,6 +21,8 @@
         <li><a href="./feedback.html">Feedback</a></li>
         <li><a href="./information.html">Information</a></li>
         <li><a href="./inputpage.php">Database input</a></li>
+        <li><a href="./deletepage.php">Delete page</a></li>
+        <li><a href="./altertables.php">Alter tables</a></li>
       </ul>
     </nav>
     <div>
