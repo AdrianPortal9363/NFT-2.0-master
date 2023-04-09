@@ -32,11 +32,13 @@
   </header>
   <main class="about-us">
   <h1>Delete Transaction</h1> <br>
+  <div class="deleteform">
     <form action="deletedata.php" method="POST" enctype="multipart/form-data">
         <label for="id">ID number of the table:</label> <br>
         <input type="text" id="id" name="id">
         <input type="submit" name="submit" value="Delete">
     </form>
+    </div>
   </main>
   <footer>
     <div id="copyright">

@@ -32,7 +32,7 @@
   </header>
   <main class="about-us">
   <h1>Update Transaction</h1> <br>
-  <h2 id="alterh2">
+  <div class="alterform">
     <form action="altertable.php" method="POST" id="alterform" enctype="multipart/form-data">
         <label for="id">ID number of the table:</label> <br>
         <input type="text" id="id" name="id">
@@ -44,7 +44,7 @@
         <input type="file" name="file_upload" id="file_upload" class="fileupload">
         <input type="submit" id="alter" name="submit" value="Alter table">
     </form>
-  </h2>
+  </div>
   </main>
   <footer>
     <div id="copyright">

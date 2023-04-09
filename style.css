@@ -377,3 +377,8 @@ label {
   display: block;
   margin-top: 10px;
 }
+
+.deleteform, .alterform
+{
+  margin-top: 20px;
+}

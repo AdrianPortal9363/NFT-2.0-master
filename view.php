@@ -18,13 +18,14 @@ echo "<table>";
 echo "<tr><th>Image</th><th>Price</th><th>Name</th></tr>";
 while ($row = mysqli_fetch_assoc($nfts)) 
 {
-    $image_path = "uploads/" . $row['image'];
+    $path = "/var/www/nftwebsite/Uploads/" . $image;
     $price = $row['price'];
     $name = $row['name'];
-    echo "<tr><td><img src='$image_path' alt='nft image'></td><td>$price</td><td>$name</td></tr>";
+    echo "<tr><td><img src='path' alt='$name' width='100'></td><td>$price</td><td>$name</td></tr>";
 }
 echo "</table>";
 
 
 mysqli_close($dbc);
 ?>
+

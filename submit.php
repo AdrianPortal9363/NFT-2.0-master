@@ -17,7 +17,7 @@ else {
 
     $image = $_FILES['file_upload']['name'];
     $temp_name = $_FILES['file_upload']['tmp_name'];
-    $path = "uploads/" . $image;
+    $path = "/var/www/nftwebsite/Uploads/" . $image;
     move_uploaded_file($temp_name, $path);
 
     $sql = "INSERT INTO nfts (price, name, image) VALUES ('$price', '$name', '$image')";

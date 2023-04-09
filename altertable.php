@@ -23,7 +23,7 @@ else
     {
         $image = $_FILES['image']['name'];
         $temp_name = $_FILES['image']['tmp_name'];
-        $path = "uploads/" . $image;
+        $path = "/var/www/nftwebsite/Uploads/" . $image;
         move_uploaded_file($temp_name, $path);
         $query = "UPDATE nfts SET name='$name', price='$price', image='$image' WHERE cid='$id'";
         $result = mysqli_query($dbc, $query) or die("Error querying database");
