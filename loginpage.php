@@ -1,10 +1,3 @@
-<?php
-session_start();
-
-if (isset($_POST['submit'])) {
-  // Process the login form here
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>

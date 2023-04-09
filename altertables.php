@@ -31,19 +31,22 @@
     </div>
   </header>
   <main class="about-us">
-  <h1>Update Transaction</h1> <br>
   <div class="alterform">
+    <div>
     <form action="altertable.php" method="POST" id="alterform" enctype="multipart/form-data">
-        <label for="id">ID number of the table:</label> <br>
+        <label for="table" id="idnumber">Enter name table to alter</label>
+        <input type="text" id="table" name="table">
+        <label for="id" id="idnumber">ID number of the table:</label>
         <input type="text" id="id" name="id">
-        <label for="name">Replace name of nft:</label>
+        <label for="name" id="replacename">Replace name of nft:</label>
         <input type="text" id="name" name="name">
-        <label for="price">Replace price of nft:</label>
+        <label for="price" id="replaceprice">Replace price of nft:</label>
         <input type="text" id="price" name="price">
-        <label for="image">Replace image of nft:</label>
+        <label for="image" id="replaceimage">Replace image of nft:</label>
         <input type="file" name="file_upload" id="file_upload" class="fileupload">
         <input type="submit" id="alter" name="submit" value="Alter table">
     </form>
+    </div>
   </div>
   </main>
   <footer>

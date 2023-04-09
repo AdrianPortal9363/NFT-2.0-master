@@ -14,17 +14,21 @@ if (!$nfts)
     die("Error querying database: " . mysqli_error($dbc));
 }
 
-echo "<table>";
-echo "<tr><th>Image</th><th>Price</th><th>Name</th></tr>";
+echo "<div class='nft-container'>";
 while ($row = mysqli_fetch_assoc($nfts)) 
 {
-    $path = "/var/www/nftwebsite/Uploads/" . $image;
+    $path = "/var/www/nftwebsite/Uploads/" . $row['image'];
     $price = $row['price'];
     $name = $row['name'];
-    echo "<tr><td><img src='path' alt='$name' width='100'></td><td>$price</td><td>$name</td></tr>";
+    echo "<div class='nft-item'>
+            <img src='$path' width='100'>
+            <div class='nft-details'>
+                <div class='nft-name'>$name</div>
+                <div class='nft-price'>$price</div>
+            </div>
+         </div>";
 }
-echo "</table>";
-
+echo "</div>";
 
 mysqli_close($dbc);
 ?>

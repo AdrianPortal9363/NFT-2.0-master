@@ -18,6 +18,7 @@ else
     error_log("The ID value is: " . $id);
     $name = $_POST['name'];
     $price = $_POST['price'];
+    $table = $_POST['table']
 
     if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) 
     {
@@ -25,7 +26,7 @@ else
         $temp_name = $_FILES['image']['tmp_name'];
         $path = "/var/www/nftwebsite/Uploads/" . $image;
         move_uploaded_file($temp_name, $path);
-        $query = "UPDATE nfts SET name='$name', price='$price', image='$image' WHERE cid='$id'";
+        $query = "UPDATE $table SET name='$name', price='$price', image='$image' WHERE cid='$id'";
         $result = mysqli_query($dbc, $query) or die("Error querying database");
     }
     else

@@ -349,7 +349,7 @@ label {
   margin-top: 20px;
 }
 
-#id, #name, #price, #file_upload {
+#id, #name, #price, #file_upload, #table {
   padding: 10px;
   font-size: 16px;
   border: 2px solid #ccc;
@@ -378,7 +378,109 @@ label {
   margin-top: 10px;
 }
 
-.deleteform, .alterform
+.about-us {
+  text-align: center;
+}
+
+.alterform {
+  display: inline-block;
+  text-align: left;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#idnumber, #replacename, #replaceprice, #repaceimage
 {
-  margin-top: 20px;
+  display: block;
+  margin-top: 10px;
+}
+
+#id, #name, #price, #file_upload, #alter, #table
+{
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#alter 
+{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#alter:hover {
+  background-color: #3e8e41;
+}
+
+
+.about-us {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.deleteform {
+  margin: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+#id {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#id, #delete {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+#delete {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#delete:hover {
+  background-color: #3e8e41;
+}
+
+.nft-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nft-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.nft-details {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.nft-name {
+  font-weight: bold;
+}
+
+.nft-price {
+  color: #666;
 }
