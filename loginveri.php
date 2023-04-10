@@ -13,14 +13,14 @@ if (isset($_POST['submit']))
     $username = $_POST['Username'];
     $password = $_POST['Password'];
 
-    $query = "SELECT password_salt, password_hash FROM users WHERE username = '$username'";
+    $query = "SELECT salt, password_hash FROM users WHERE username = '$username'";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
 
     if (mysqli_num_rows($result) > 0) 
     {
 
-        $salt = $row['password_salt'];
+        $salt = $row['salt'];
         $hash = $row['password_hash'];
         $password = $salt . $password;
         $password = hash('sha256', $password);

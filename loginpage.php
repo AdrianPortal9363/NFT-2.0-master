@@ -27,14 +27,14 @@ if (isset($_POST['submit']))
         <a class="back" href="index.html"><span class="fas fa-long-arrow-alt-left"></span> back to home page</a>
         <main class="loginpage">
             <div class="login_page">
-                <form action="">
+                <form action="loginverification.php">
                     <label for="Username" id="Username_label">Username</label>
                     <input type="text" name="Username" id="Username_" size="40" value="" class="text-input"/>
                     <label class="error" for="usererror" id="usererror_">* Username field cannot be empty and must follow specifications.</label>
                     <label for="Password" id="Password_label">Password</label>
                     <input type="password" name="Password" id="Password_" size="40" value="" class="pass-input">
                     <label class="error" for="passerror" id="passerror_">* Password field cannot not be empty and must follow specifications. </label>
-                    <input type="Submit" href="#" id="sub_button" value="Sign in">
+                    <input type="Submit" name="submit" href="#" id="sub_button" value="Sign in">
                     
                 </form>
             </div>
