@@ -29,7 +29,7 @@ session_start();
     </nav>
     <div>
       <a href="#" class="cart-icon right"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-      <a href="#" class="wallet-icon right"><i class="fa fa-wallet" aria-hidden="true"></i></a>
+      <a href="registration.php" class="wallet-icon right"><i class="fa fa-wallet" aria-hidden="true"></i></a>
       <a href="loginpage.php" class="user-icon right"><i class="fa fa-user" aria-hidden="true"></i></a>
     </div>
   </header>
