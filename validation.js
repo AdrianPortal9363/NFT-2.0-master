@@ -22,7 +22,19 @@ $(document).ready(function()
         var submit = $("input#sub_button").get(0);
         if (login)
         {
-            $("form").attr("action", "loginsuccessful.html");
+            $.ajax({
+                url: "start_session.php",
+                method: "POST",
+                data: { username: username },
+                success: function(response) 
+                {
+                    console.log(response);
+                    window.location.href = "loginsuccessful.html";
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+            });
         }
     });
 });
