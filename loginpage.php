@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_POST['submit'])) 
 {
-  // Process the login form here
+    
 }
 ?>
 <!DOCTYPE html>
@@ -24,16 +24,14 @@ if (isset($_POST['submit']))
                 <h1>Login Page</h1>
             </nav>
         </header>
-        <a class="back" href="index.html"><span class="fas fa-long-arrow-alt-left"></span> back to home page</a>
+        <a class="back" href="index.php"><span class="fas fa-long-arrow-alt-left"></span> back to home page</a>
         <main class="loginpage">
             <div class="login_page">
                 <form action="loginverification.php">
                     <label for="Username" id="Username_label">Username</label>
                     <input type="text" name="Username" id="Username_" size="40" value="" class="text-input"/>
-                    <label class="error" for="usererror" id="usererror_">* Username field cannot be empty and must follow specifications.</label>
                     <label for="Password" id="Password_label">Password</label>
                     <input type="password" name="Password" id="Password_" size="40" value="" class="pass-input">
-                    <label class="error" for="passerror" id="passerror_">* Password field cannot not be empty and must follow specifications. </label>
                     <input type="Submit" name="submit" href="#" id="sub_button" value="Sign in">
                     
                 </form>

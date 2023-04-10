@@ -12,19 +12,17 @@
     <body>
         <header class="navbar">
             <nav>
-                <h1>Login Page</h1>
+                <h1>Registration Page</h1>
             </nav>
         </header>
-        <a class="back" href="index.html"><span class="fas fa-long-arrow-alt-left"></span> back to home page</a>
+        <a class="back" href="index.php"><span class="fas fa-long-arrow-alt-left"></span> back to home page</a>
         <main class="loginpage">
             <div class="login_page">
                 <form action="registrationverification.php" method="POST">
                     <label for="Username" id="Username_label">Username</label>
                     <input type="text" name="Username" id="Username_" size="40" value="" class="text-input"/>
-                    <label class="error" for="usererror" id="usererror_">* Username field cannot be empty and must follow specifications.</label>
                     <label for="Password" id="Password_label">Password</label>
                     <input type="password" name="Password" id="Password_" size="40" value="" class="pass-input">
-                    <label class="error" for="passerror" id="passerror_">* Password field cannot not be empty and must follow specifications. </label>
                     <label for="email" id="email_label">Email</label>
                     <input type="text" name="Email" id="Email_" size="40" value="" class="email-input">
                     <label for="Phone" id="Phone_label">Phone</label>

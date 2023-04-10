@@ -17,11 +17,11 @@ session_start();
   <header class="navbar">
     <nav>
       <ul>
-        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.php">Home</a></li>
         <li><a href="marketplace.php">Marketplace</a></li>
-        <li><a href="./aboutus.html">About Us</a></li>
-        <li><a href="./feedback.html">Feedback</a></li>
-        <li><a href="./information.html">Information</a></li>
+        <li><a href="./aboutus.php">About Us</a></li>
+        <li><a href="./feedback.php">Feedback</a></li>
+        <li><a href="./information.php">Information</a></li>
         <li><a href="./inputpage.php">Database input</a></li>
         <li><a href="./deletepage.php">Delete page</a></li>
         <li><a href="./altertables.php">Alter tables</a></li>
