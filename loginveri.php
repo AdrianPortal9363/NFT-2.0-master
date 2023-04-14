@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 
 if (isset($_POST['submit'])) 
@@ -13,7 +16,7 @@ if (isset($_POST['submit']))
     $username = $_POST['Username'];
     $password = $_POST['Password'];
 
-    $query = "SELECT salt, password_hash FROM users WHERE username = '$username'";
+    $query = "SELECT salt, password FROM users WHERE username = '$username'";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
 
@@ -21,7 +24,7 @@ if (isset($_POST['submit']))
     {
 
         $salt = $row['salt'];
-        $hash = $row['password_hash'];
+        $hash = $row['password'];
         $password = $salt . $password;
         $password = hash('sha256', $password);
         if ($password == $hash) 
