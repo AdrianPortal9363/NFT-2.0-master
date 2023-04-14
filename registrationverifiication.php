@@ -1,5 +1,10 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+{
     $username = $_POST['Username'];
     $password = $_POST['Password'];
     $email = $_POST['Email'];
@@ -15,18 +20,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn = mysqli_connect($db_host, $db_username, $db_passwd, $db_name);
 
-    if (!$conn) {
+    if (!$conn) 
+    {
         die("Connection failed: " . mysqli_connect_error());
     }
+    $stmt = $conn->prepare("INSERT INTO users (username, password, email, phone, salt) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $username, $hashed_password, $email, $phone, $salt);
 
-    $sql = "INSERT INTO users (username, password, email, phone) VALUES ('$username', '$hashed_password', '$email', '$phone')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Registration successful!";
+    if ($stmt->execute()) {
+        header('Location: index.php');
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo "Error displaying the page ";
     }
-
+    $stmt->close();
     mysqli_close($conn);
 }
 ?>

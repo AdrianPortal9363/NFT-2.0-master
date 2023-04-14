@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="h1.css">
         <script src="jquery-3.6.3.min.js"></script>
         <script src="jquery.js"></script>
+        <script src="registrationsp.js"></script>
     </head>
     <body>
         <header class="navbar">
@@ -18,7 +22,7 @@
         <a class="back" href="index.php"><span class="fas fa-long-arrow-alt-left"></span> back to home page</a>
         <main class="loginpage">
             <div class="login_page">
-                <form action="registrationverification.php" method="POST">
+                <form action="registrationverifiication.php" method="POST">
                     <label for="Username" id="Username_label">Username</label>
                     <input type="text" name="Username" id="Username_" size="40" value="" class="text-input"/>
                     <label for="Password" id="Password_label">Password</label>
@@ -27,7 +31,7 @@
                     <input type="text" name="Email" id="Email_" size="40" value="" class="email-input">
                     <label for="Phone" id="Phone_label">Phone</label>
                     <input type="text" name="phone" id="phone_" size="40" value="" class="phone-input">
-                    <input type="Submit" href="#" id="sub_button" value="Register">
+                    <input type="submit" name="submit" class="submit" id="sub_button" value="Register">
                 </form>
             </div>
             <div class="side_info">

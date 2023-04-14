@@ -1,10 +1,5 @@
 <?php
 session_start();
-
-if (isset($_POST['submit'])) 
-{
-    
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +11,6 @@ if (isset($_POST['submit']))
         <link rel="stylesheet" type="text/css" href="h1.css">
         <script src="jquery-3.6.3.min.js"></script>
         <script src="jquery.js"></script>
-        <script src="validation.js"></script>
     </head>
     <body>
         <header class="navbar">
@@ -27,12 +21,12 @@ if (isset($_POST['submit']))
         <a class="back" href="index.php"><span class="fas fa-long-arrow-alt-left"></span> back to home page</a>
         <main class="loginpage">
             <div class="login_page">
-                <form action="loginverification.php">
+                <form action="loginveri.php" method="POST">
                     <label for="Username" id="Username_label">Username</label>
-                    <input type="text" name="Username" id="Username_" size="40" value="" class="text-input"/>
+                    <input type="text" class="username" name="Username" id="Username_" size="40" value="" class="text-input"/>
                     <label for="Password" id="Password_label">Password</label>
-                    <input type="password" name="Password" id="Password_" size="40" value="" class="pass-input">
-                    <input type="Submit" name="submit" href="#" id="sub_button" value="Sign in">
+                    <input type="password" class="password" name="Password" id="Password_" size="40" value="" class="pass-input">
+                    <input type="Submit" class="submit" name="submit" href="#" id="sub_button" value="Sign in">
                     
                 </form>
             </div>

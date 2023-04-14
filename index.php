@@ -88,11 +88,8 @@ session_start();
       <li><a href="#">Contact Us</a></li>
     </ul>
   </footer>
-
-
   <script src="java.js"></script>
 </body>
-
 </html>  
 </body>
 </html>

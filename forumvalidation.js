@@ -1,4 +1,6 @@
-$(function() 
+function validation()
+{
+    $(function() 
 {
     $('.error').hide();
     $(".button").click(function() 
@@ -30,3 +32,5 @@ $(function()
         }
     });
 });
+}
+
