@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $phone = $_POST['phone'];
 
     $salt = bin2hex(random_bytes(16));
+    $password = $salt . ':' . $password;
     $hashed_password = hash('sha256', $password . $salt);
 
     $db_host = "localhost";
@@ -23,9 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $stmt = $conn->prepare("INSERT INTO users (username, password, email, phone, salt) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $username, $hashed_password, $email, $phone, $salt);
 
-    if ($stmt->execute()) {
+    if ($stmt->execute()) 
+    {
         header('Location: index.php');
-    } else {
+    } 
+    else 
+    {
         echo "Error displaying the page ";
     }
     $stmt->close();

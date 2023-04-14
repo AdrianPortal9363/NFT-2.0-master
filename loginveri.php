@@ -25,8 +25,8 @@ if (isset($_POST['submit']))
 
         $salt = $row['salt'];
         $hash = $row['password'];
-        $password = $salt . $password;
-        $password = hash('sha256', $password);
+        $password = $salt . ':' . $password;
+        $password = hash('sha256', $password . $salt);
         if ($password == $hash) 
         {
 
